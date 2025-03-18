@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zunchadoras</h1>
+        
+        <h4>Zunchadora 1</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Zunchadoras', 'Zunchadora 1')">
+        <img id="img-ZunchadorasZunchadora 1" style="width: 100px; display: none;">
+        <textarea id="coment-ZunchadorasZunchadora 1" placeholder="Comentario..." oninput="guardarComentario('Zunchadoras', 'Zunchadora 1')"></textarea>
+        
+        <h4>Zunchadora 2</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Zunchadoras', 'Zunchadora 2')">
+        <img id="img-ZunchadorasZunchadora 2" style="width: 100px; display: none;">
+        <textarea id="coment-ZunchadorasZunchadora 2" placeholder="Comentario..." oninput="guardarComentario('Zunchadoras', 'Zunchadora 2')"></textarea>
+        
+        <h4>Zunchadora 3</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Zunchadoras', 'Zunchadora 3')">
+        <img id="img-ZunchadorasZunchadora 3" style="width: 100px; display: none;">
+        <textarea id="coment-ZunchadorasZunchadora 3" placeholder="Comentario..." oninput="guardarComentario('Zunchadoras', 'Zunchadora 3')"></textarea>
+        
+        <h4>Zunchadora 4</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Zunchadoras', 'Zunchadora 4')">
+        <img id="img-ZunchadorasZunchadora 4" style="width: 100px; display: none;">
+        <textarea id="coment-ZunchadorasZunchadora 4" placeholder="Comentario..." oninput="guardarComentario('Zunchadoras', 'Zunchadora 4')"></textarea>
+        
+        <h4>Zunchadora 5</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Zunchadoras', 'Zunchadora 5')">
+        <img id="img-ZunchadorasZunchadora 5" style="width: 100px; display: none;">
+        <textarea id="coment-ZunchadorasZunchadora 5" placeholder="Comentario..." oninput="guardarComentario('Zunchadoras', 'Zunchadora 5')"></textarea>
+               
+        <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

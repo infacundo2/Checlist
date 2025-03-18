@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Envolvedora de Film</h1>
+               
+        <h4>Envolvedora de Film</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Envolvedora', 'Envolvedora de Film')">
+        <img id="img-EnvolvedoraEnvolvedora de Film" style="width: 100px; display: none;">
+        <textarea id="coment-EnvolvedoraEnvolvedora de Film" placeholder="Comentario..." oninput="guardarComentario('Envolvedora', 'Envolvedora de Film')"></textarea>
+
+        <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

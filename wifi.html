@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Intensidades Wifi</h1>
+        
+        <h4>Intensidad WiFi TI</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'TI')">
+        <img id="img-IntensidadTI" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadTI" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'TI')"></textarea>
+
+        
+        <h4>Intensidad Wifi Diseño</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Diseño')">
+        <img id="img-IntensidadDiseño" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadDiseño" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Diseño')"></textarea>
+
+        
+        <h4>Intensidad Wifi Ventas</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Venta')">
+        <img id="img-IntensidadVenta" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadVenta" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Venta')"></textarea>
+        
+        <h4>Intensidad Wifi Cajas</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Cajas')">
+        <img id="img-IntensidadCajas" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadCajas" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Cajas')"></textarea>
+
+        <h4>Intensidad Wifi Sala de Reuniones</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Sala de Reuniones')">
+        <img id="img-IntensidadSala de Reuniones" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadSala de Reuniones" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Sala de Reuniones')"></textarea>
+
+        <h4>Intensidad Wifi Contabilidad</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Contabilidad')">
+        <img id="img-IntensidadContabilidad" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadContabilidad" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Contabilidad')"></textarea>
+
+        <h4>Intensidad Wifi Revision</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Revision')">
+        <img id="img-IntensidadRevision" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadRevision" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Revision')"></textarea>
+        
+        <h4>Intensidad Wifi Inicio Picking</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Inicio Picking')">
+        <img id="img-IntensidadInicio Picking" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadInicio Picking" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Inicio Picking')"></textarea>
+
+        <h4>Intensidad Wifi Mitad Picking</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Mitad Picking')">
+        <img id="img-IntensidadMitad Picking" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadMitad Picking" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Mitad Picking')"></textarea>
+        
+        <h4>Intensidad Wifi Final Picking</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Final Picking')">
+        <img id="img-IntensidadFinal Picking" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadFinal Picking" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Final Picking')"></textarea>
+        
+        <h4>Intensidad Wifi Inicio Bodega Mayor</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Inicio Bodega Mayor')">
+        <img id="img-IntensidadInicio Bodega Mayor" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadInicio Bodega Mayor" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Inicio Bodega Mayor')"></textarea>
+                
+        <h4>Intensidad Wifi Mitad Bodega Mayor</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Mitad Bodega Mayor')">
+        <img id="img-IntensidadMitad Bodega Mayor" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadMitad Bodega Mayor" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Mitad Bodega Mayor')"></textarea>
+                
+        <h4>Intensidad Wifi Final Bodega Mayor</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Final Bodega Mayor')">
+        <img id="img-IntensidadFinal Bodega Mayor" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadFinal Bodega Mayor" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Final Bodega Mayor')"></textarea>
+                
+        <h4>Intensidad Wifi Recepcion</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Recepcion')">
+        <img id="img-IntensidadRecepcion" style="width: 100px; display: none;">
+        <textarea id="coment-IntensidadRecepcion" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Recepcion')"></textarea>
+        
+        <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

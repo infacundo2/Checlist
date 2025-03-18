@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tableros</h1>
+               
+        <h4>Tablero General Voltaje de Fases</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Tableros', 'Voltaje de Fases')">
+        <img id="img-TablerosVoltaje de Fases" style="width: 100px; display: none;">
+        <textarea id="coment-TablerosVoltaje de Fases" placeholder="Comentario..." oninput="guardarComentario('Tableros', 'Voltaje de Fases')"></textarea>
+        
+        <h4>Tablero General Voltaje Fase a Fase</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Tableros', 'Voltaje Fase a Fase')">
+        <img id="img-TablerosVoltaje Fase a Fase" style="width: 100px; display: none;">
+        <textarea id="coment-TablerosVoltaje Fase a Fase" placeholder="Comentario..." oninput="guardarComentario('Tableros', 'Voltaje Fase a Fase')"></textarea>
+
+        
+        <h4>Tablero General Intensidades</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Tableros', 'Intensidades')">
+        <img id="img-TablerosIntensidades" style="width: 100px; display: none;">
+        <textarea id="coment-TablerosIntensidades" placeholder="Comentario..." oninput="guardarComentario('Tableros', 'Intensidades')"></textarea>
+        
+        <h4>Tablero Climatizacion</h4>
+        <input type="file" accept="image/*" onchange="guardarImagen(event, 'Tableros', 'Climatizacion')">
+        <img id="img-TablerosClimatizacion" style="width: 100px; display: none;">
+        <textarea id="coment-TablerosClimatizacion" placeholder="Comentario..." oninput="guardarComentario('Tableros', 'Climatizacion')"></textarea>
+        
+        <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

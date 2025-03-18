@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UPS</h1>
+               
+        <h4>UPS 1</h4>
+<input type="file" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 1')">
+<img id="img-UPSUPS 1" style="width: 100px; display: none;">
+<textarea id="coment-UPSUPS 1" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 1')"></textarea>
+
+<h4>UPS 2</h4>
+<input type="file" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 2')">
+<img id="img-UPSUPS 2" style="width: 100px; display: none;">
+<textarea id="coment-UPSUPS 2" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 2')"></textarea>
+
+        
+        <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
