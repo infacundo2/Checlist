@@ -24,6 +24,7 @@ function irATableros() {
     window.location.href = "tableros.html";
 }
 
+
 function abrirCamara(seccion, area) {
     const fileInput = document.getElementById(`file-${seccion}${area}`);
 
