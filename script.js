@@ -24,6 +24,25 @@ function irATableros() {
     window.location.href = "tableros.html";
 }
 
+function abrirCamara(seccion, area) {
+    const fileInput = document.getElementById(`file-${seccion}${area}`);
+
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Si es un móvil con cámara, abrir la cámara
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+            .then(stream => {
+                fileInput.click();  // Simula la selección de archivo
+            })
+            .catch(error => {
+                console.warn("No se pudo acceder a la cámara, se abrirá el explorador de archivos.");
+                fileInput.click();
+            });
+    } else {
+        // En PC, abrir el explorador de archivos directamente
+        fileInput.click();
+    }
+}
+
 // Función para verificar si el dispositivo tiene una cámara disponible
 function tieneCamaraDisponible() {
     return new Promise((resolve, reject) => {

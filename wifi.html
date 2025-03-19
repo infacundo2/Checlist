@@ -12,14 +12,17 @@
         
         <h4>Intensidad WiFi TI</h4>
 
-        <input type="file" id="file-IntensidadTI" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'TI')" style="display: none;">
-        <label for="file-IntensidadTI" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'TI')">📷 Iniciar</button>
-        <video id="video-IntensidadTI" style="display: none;" autoplay></video>
-        <canvas id="canvas-IntensidadTI" style="display: none;"></canvas>
-        <img id="img-IntensidadTI" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
-        <textarea id="coment-IntensidadTI" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'TI')"></textarea>
-
+        <input type="file" id="file-IntensidadTI" accept="image/*" capture="environment" 
+        onchange="guardarImagen(event, 'Intensidad', 'TI')" style="display: none;">
+ <label for="file-IntensidadTI" class="custom-file-upload">📂 Subir Imagen</label>
+ 
+ <button id="btn-meson1" onclick="abrirCamara('Intensidad', 'TI')">📷 Tomar Foto</button> 
+ 
+ <img id="img-IntensidadTI" style="width: 100px; display: none; margin: auto;">
+ <canvas id="canvas-IntensidadTI" style="display: none;"></canvas>
+ 
+ <textarea id="coment-IntensidadTI" placeholder="Comentario..." 
+           oninput="guardarComentario('Intensidad', 'TI')"></textarea>
 
         
         <h4>Intensidad Wifi Diseño</h4>
