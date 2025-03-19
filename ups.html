@@ -11,14 +11,24 @@
         <h1>UPS</h1>
                
         <h4>UPS 1</h4>
-<input type="file" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 1')">
-<img id="img-UPSUPS 1" style="width: 100px; display: none;">
-<textarea id="coment-UPSUPS 1" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 1')"></textarea>
+        
+        <input type="file" id="file-UPS1" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 1')" style="display: none;">
+        <label for="file-UPS1" class="custom-file-upload">📂 Subir Imagen</label>
+        <button id="btn-meson1" onclick="tomarFoto('UPS', 'UPS 1')">📷 Tomar Foto</button>
+        <video id="video-UPSUPS 1" style="display: none;" autoplay></video>
+        <canvas id="canvas-UPSUPS 1" style="display: none;"></canvas>  
+        <img id="img-UPSUPS 1" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
+        <textarea id="coment-UPSUPS 1" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 1')"></textarea>
 
-<h4>UPS 2</h4>
-<input type="file" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 2')">
-<img id="img-UPSUPS 2" style="width: 100px; display: none;">
-<textarea id="coment-UPSUPS 2" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 2')"></textarea>
+        <h4>UPS 2</h4>
+        
+        <input type="file" id="file-UPS2" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 2')" style="display: none;">
+        <label for="file-UPS2" class="custom-file-upload">📂 Subir Imagen</label>
+        <button id="btn-meson1" onclick="tomarFoto('UPS', 'UPS 2')">📷 Tomar Foto</button>
+        <video id="video-UPSUPS 2" style="display: none;" autoplay></video>
+        <canvas id="canvas-UPSUPS 2" style="display: none;"></canvas>  
+        <img id="img-UPSUPS 2" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
+        <textarea id="coment-UPSUPS 2" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 2')"></textarea>
 
         
         <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>

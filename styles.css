@@ -49,3 +49,38 @@ button {
 button:hover {
     background: linear-gradient(to right, #0056b3, #003d82);
 }
+
+.custom-file-upload, #btn-meson1 {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    display: inline-block;
+    vertical-align: middle; /* Para que queden alineados */
+}                           
+
+#btn-meson1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+    margin-bottom: 10px; /* Agrega espacio debajo del botón */
+}
+.custom-file-upload:hover {
+    background-color: #218838;
+}
+
+#btn-meson1:hover {
+    background-color: #0056b3;
+}
+textarea {
+    
+    margin-top: 20px; /* Agrega un espacio entre el botón y el textarea */
+    padding: 10px;
+    width: 50%; /* Asegúrate de que ocupe todo el espacio disponible */
+    border-radius: 5px;
+    font-size: 14px;
+}
