@@ -14,7 +14,7 @@
 
         <input type="file" id="file-IntensidadTI" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'TI')" style="display: none;">
         <label for="file-IntensidadTI" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'TI')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'TI')">📷 Tomar Foto</button>
         <video id="video-IntensidadTI" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadTI" style="display: none;"></canvas>
         <img id="img-IntensidadTI" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -25,7 +25,7 @@
         <h4>Intensidad Wifi Diseño</h4>
         <input type="file" id="file-IntensidadDiseño" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Diseño')" style="display: none;">
         <label for="file-IntensidadDiseño" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Diseño')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Diseño')">📷 Tomar Foto</button>
         <video id="video-IntensidadDiseño" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadDiseño" style="display: none;"></canvas>
         <img id="img-IntensidadDiseño" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -35,7 +35,7 @@
         <h4>Intensidad Wifi Ventas</h4>
         <input type="file" id="file-IntensidadVentas" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Ventas')" style="display: none;">
         <label for="file-IntensidadVentas" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Ventas')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Ventas')">📷 Tomar Foto</button>
         <video id="video-IntensidadVentas" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadVentas" style="display: none;"></canvas>
         <img id="img-IntensidadVentas" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -44,7 +44,7 @@
         <h4>Intensidad Wifi Cajas</h4>
         <input type="file" id="file-IntensidadCajas" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Cajas')" style="display: none;">
         <label for="file-IntensidadCajas" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Cajas')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Cajas')">📷 Tomar Foto</button>
         <video id="video-IntensidadCajas" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadCajas" style="display: none;"></canvas>
         <img id="img-IntensidadCajas" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -53,7 +53,7 @@
         <h4>Intensidad Wifi Sala de Reuniones</h4>
         <input type="file" id="file-IntensidadSalaReuniones" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Sala de Reuniones')" style="display: none;">
         <label for="file-IntensidadSalaReuniones" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Sala de Reuniones')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Sala de Reuniones')">📷 Tomar Foto</button>
         <video id="video-IntensidadSala de Reuniones" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadSala de Reuniones" style="display: none;"></canvas>
         <img id="img-IntensidadSala de Reuniones" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -62,7 +62,7 @@
         <h4>Intensidad Wifi Contabilidad</h4>
         <input type="file" id="file-IntensidadContabilidad" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Contabilidad')" style="display: none;">
         <label for="file-IntensidadContabilidad" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Contabilidad')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Contabilidad')">📷 Tomar Foto</button>
         <video id="video-IntensidadContabilidad" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadContabilidad" style="display: none;"></canvas>
         <img id="img-IntensidadContabilidad" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -71,7 +71,7 @@
         <h4>Intensidad Wifi Revision</h4>
         <input type="file" id="file-IntensidadRevision" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Revision')" style="display: none;">
         <label for="file-IntensidadRevision" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Revision')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Revision')">📷 Tomar Foto</button>
         <video id="video-IntensidadRevision" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadRevision" style="display: none;"></canvas>
         <img id="img-IntensidadRevision" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -80,7 +80,7 @@
         <h4>Intensidad Wifi Inicio Picking</h4>
         <input type="file" id="file-IntensidadInicioPicking" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Inicio Picking')" style="display: none;">
         <label for="file-IntensidadInicioPicking" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Inicio Picking')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Inicio Picking')">📷 Tomar Foto</button>
         <video id="video-IntensidadInicio Picking" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadInicio Picking" style="display: none;"></canvas>
         <img id="img-IntensidadInicio Picking" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -89,7 +89,7 @@
         <h4>Intensidad Wifi Mitad Picking</h4>
         <input type="file" id="file-IntensidadMitadPicking" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Mitad Picking')" style="display: none;">
         <label for="file-IntensidadMitadPicking" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Mitad Picking')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Mitad Picking')">📷 Tomar Foto</button>
         <video id="video-IntensidadMitad Picking" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadMitad Picking" style="display: none;"></canvas>
         <img id="img-IntensidadMitad Picking" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -98,7 +98,7 @@
         <h4>Intensidad Wifi Final Picking</h4>
         <input type="file" id="file-IntensidadFinalPicking" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Final Picking')" style="display: none;">
         <label for="file-IntensidadFinalPicking" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Final Picking')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Final Picking')">📷 Tomar Foto</button>
         <video id="video-IntensidadFinal Picking" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadFinal Picking" style="display: none;"></canvas>
         <img id="img-IntensidadFinal Picking" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -107,7 +107,7 @@
         <h4>Intensidad Wifi Inicio Bodega Mayor</h4>
         <input type="file" id="file-IntensidadInicioBodegaMayor" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Inicio Bodega Mayor')" style="display: none;">
         <label for="file-IntensidadInicioBodegaMayor" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Inicio Bodega Mayor')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Inicio Bodega Mayor')">📷 Tomar Foto</button>
         <video id="video-IntensidadInicio Bodega Mayor" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadInicio Bodega Mayor" style="display: none;"></canvas>  
         <img id="img-IntensidadInicio Bodega Mayor" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -116,7 +116,7 @@
         <h4>Intensidad Wifi Mitad Bodega Mayor</h4>
         <input type="file" id="file-IntensidadMitadBodegaMayor" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Mitad Bodega Mayor')" style="display: none;">
         <label for="file-IntensidadMitadBodegaMayor" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Mitad Bodega Mayor')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Mitad Bodega Mayor')">📷 Tomar Foto</button>
         <video id="video-IntensidadMitad Bodega Mayor" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadMitad Bodega Mayor" style="display: none;"></canvas>  
         <img id="img-IntensidadMitad Bodega Mayor" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
@@ -125,20 +125,20 @@
         <h4>Intensidad Wifi Final Bodega Mayor</h4>
         <input type="file" id="file-IntensidadFinalBodegaMayor" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Final Bodega Mayor')" style="display: none;">
         <label for="file-IntensidadFinalBodegaMayor" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'Final Bodega Mayor')">📷 Tomar Foto</button>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Final Bodega Mayor')">📷 Tomar Foto</button>
         <video id="video-IntensidadFinal Bodega Mayor" style="display: none;" autoplay></video>
         <canvas id="canvas-IntensidadFinal Bodega Mayor" style="display: none;"></canvas>  
         <img id="img-IntensidadFinal Bodega Mayor" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
         <textarea id="coment-IntensidadFinal Bodega Mayor" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Final Bodega Mayor')"></textarea>
 
         <h4>Intensidad Wifi Recepcion</h4>
-        <input type="file" id="file-Intensidadrecepcion" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'recepcion')" style="display: none;">
-        <label for="file-Intensidadrecepcion" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="tomarFoto('Intensidad', 'recepcion')">📷 Tomar Foto</button>
-        <video id="video-Intensidadrecepcion" style="display: none;" autoplay></video>
-        <canvas id="canvas-Intensidadrecepcion" style="display: none;"></canvas>  
-        <img id="img-Intensidadrecepcion" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
-        <textarea id="coment-Intensidadrecepcion" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'recepcion')"></textarea>
+        <input type="file" id="file-IntensidadRecepcion" accept="image/*" onchange="guardarImagen(event, 'Intensidad', 'Recepcion')" style="display: none;">
+        <label for="file-IntensidadRecepcion" class="custom-file-upload">📂 Subir Imagen</label>
+        <button id="btn-meson1" onclick="iniciarCamara('Intensidad', 'Recepcion')">📷 Tomar Foto</button>
+        <video id="video-IntensidadRecepcion" style="display: none;" autoplay></video>
+        <canvas id="canvas-IntensidadRecepcion" style="display: none;"></canvas>  
+        <img id="img-IntensidadRecepcion" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
+        <textarea id="coment-IntensidadRecepcion" placeholder="Comentario..." oninput="guardarComentario('Intensidad', 'Recepcion')"></textarea>
 
         <button onclick="irACrearchecklist()">Volver a Crear Checklist</button>
     </div>

@@ -24,6 +24,104 @@ function irATableros() {
     window.location.href = "tableros.html";
 }
 
+function tieneCamaraDisponible() {
+    return new Promise((resolve, reject) => {
+        navigator.mediaDevices.enumerateDevices()
+            .then(devices => {
+                const camaras = devices.filter(device => device.kind === 'videoinput');
+                resolve(camaras.length > 0);
+            })
+            .catch(error => {
+                console.error("Error al verificar dispositivos:", error);
+                resolve(false);
+            });
+    });
+}
+
+// Función para iniciar la cámara
+function iniciarCamara(seccion, area) {
+    const videoElement = document.getElementById(`video-${seccion}${area}`);
+    const canvasElement = document.getElementById(`canvas-${seccion}${area}`);
+
+    if (!videoElement || !canvasElement) {
+        console.error(`No se encontraron elementos de video o canvas para ${seccion} - ${area}`);
+        return;
+    }
+
+    // Verificar si el dispositivo tiene una cámara disponible
+    tieneCamaraDisponible().then(tieneCamara => {
+        if (tieneCamara) {
+            // Si hay cámara disponible, solicitar acceso
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    videoElement.srcObject = stream;
+                    videoElement.style.display = 'block'; // Mostrar el video en pantalla
+                })
+                .catch(error => {
+                    console.error('Error al acceder a la cámara: ', error);
+                    alert("No se pudo acceder a la cámara. Verifique los permisos.");
+                });
+        } else {
+            console.log("No hay cámaras disponibles en este dispositivo.");
+            alert("No se ha encontrado una cámara en este dispositivo.");
+        }
+    });
+}
+
+function tomarFoto(seccion, area) {
+    const videoElement = document.getElementById(`video-${seccion}${area}`);
+    const canvasElement = document.getElementById(`canvas-${seccion}${area}`);
+    const imgElement = document.getElementById(`img-${seccion}${area}`);
+
+    if (!videoElement || !canvasElement || !imgElement) {
+        console.error(`No se encontraron elementos de video, canvas o imagen para ${seccion} - ${area}`);
+        return;
+    }
+
+    // Verificar si el video está jugando
+    if (videoElement.srcObject) {
+        const context = canvasElement.getContext('2d');
+        // Establecer las dimensiones del canvas
+        canvasElement.width = videoElement.videoWidth;
+        canvasElement.height = videoElement.videoHeight;
+
+        // Dibujar el frame actual del video en el canvas
+        context.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
+
+        // Convertir la imagen del canvas a base64 y asignarla a la etiqueta <img>
+        const imagenBase64 = canvasElement.toDataURL("image/jpeg", 0.7);  // Calidad 70%
+        imgElement.src = imagenBase64;
+        imgElement.style.display = "block";
+
+        // Guardar la imagen en sessionStorage (para evitar sobrecargar localStorage)
+        sessionStorage.setItem(`img-${seccion}${area}`, imagenBase64);
+        
+        // Detener el flujo de la cámara después de tomar la foto (opcional)
+        const stream = videoElement.srcObject;
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+        videoElement.srcObject = null;
+    } else {
+        console.error("El video no está reproduciéndose o no hay flujo de cámara.");
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const secciones = {
+        "Intensidad": ["TI", "Diseño", "Ventas", "Cajas", "Contabilidad", "Sala de Reuniones", "Revision", "Inicio Picking", "Mitad Picking", "Final Picking", "Inicio Bodega Mayor", "Mitad Bodega Mayor", "Final Bodega Mayor", "Recepcion"],
+        "Mesones": ["Meson revision 1", "Meson revision 2", "Meson revision 3", "Meson revision 4", "Meson revision 5", "Meson revision 6", "Meson recepcion"],
+        "Zunchadoras": ["Zunchadora 1", "Zunchadora 2", "Zunchadora 3", "Zunchadora 4", "Zunchadora 5"],
+        "Envolvedora": ["Envolvedora de Film"],
+        "Tableros": ["Voltaje de Fases", "Voltaje Fase a Fase", "Intensidades", "Climatizacion"],
+        "UPS": ["UPS 1", "UPS 2"],
+    };
+
+    // NO hacer nada aquí respecto a la cámara
+});
+
+
+
 
 // Función para guardar la imagen
 function guardarImagen(event, seccion, area) {
@@ -103,7 +201,7 @@ function guardarComentario(seccion, area) {
 document.addEventListener("DOMContentLoaded", function() {
     // Secciones con sus respectivas áreas
     const secciones = {
-        "Intensidad": ["TI", "Diseño", "Venta", "Cajas", "Contabilidad", "Sala de Reuniones", "Revision", "Inicio Picking", "Mitad Picking", "Final Picking", "Inicio Bodega Mayor", "Mitad Bodega Mayor", "Final Bodega Mayor", "Recepcion"],
+        "Intensidad": ["TI", "Diseño", "Ventas", "Cajas", "Contabilidad", "Sala de Reuniones", "Revision", "Inicio Picking", "Mitad Picking", "Final Picking", "Inicio Bodega Mayor", "Mitad Bodega Mayor", "Final Bodega Mayor", "Recepcion"],
         "Mesones": ["Meson revision 1", "Meson revision 2", "Meson revision 3", "Meson revision 4", "Meson revision 5", "Meson revision 6", "Meson recepcion"],
         "Zunchadoras": ["Zunchadora 1", "Zunchadora 2", "Zunchadora 3", "Zunchadora 4", "Zunchadora 5"],
         "Envolvedora": ["Envolvedora de Film"],
@@ -139,7 +237,7 @@ function descargarPDF() {
     const imgHeight = 95;
 
     const secciones = {
-        "Intensidad": ["TI", "Diseño", "Venta", "Cajas", "Contabilidad", "Sala de Reuniones", "Revision", "Inicio Picking", "Mitad Picking", "Final Picking", "Inicio Bodega Mayor", "Mitad Bodega Mayor", "Final Bodega Mayor", "Recepcion"],
+        "Intensidad": ["TI", "Diseño", "Ventas", "Cajas", "Contabilidad", "Sala de Reuniones", "Revision", "Inicio Picking", "Mitad Picking", "Final Picking", "Inicio Bodega Mayor", "Mitad Bodega Mayor", "Final Bodega Mayor", "Recepcion"],
         "Mesones": ["Meson revision 1", "Meson revision 2", "Meson revision 3", "Meson revision 4", "Meson revision 5", "Meson revision 6", "Meson recepcion"],
         "Zunchadoras": ["Zunchadora 1", "Zunchadora 2", "Zunchadora 3", "Zunchadora 4", "Zunchadora 5"],
         "Envolvedora": ["Envolvedora de Film"],
