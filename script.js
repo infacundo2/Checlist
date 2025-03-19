@@ -24,6 +24,7 @@ function irATableros() {
     window.location.href = "tableros.html";
 }
 
+// Función para verificar si el dispositivo tiene una cámara disponible
 function tieneCamaraDisponible() {
     return new Promise((resolve, reject) => {
         navigator.mediaDevices.enumerateDevices()
@@ -55,7 +56,11 @@ function iniciarCamara(seccion, area) {
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then(stream => {
                     videoElement.srcObject = stream;
-                    videoElement.style.display = 'block'; // Mostrar el video en pantalla
+                    videoElement.style.display = 'block'; // Mostrar el video en pantalla (ahora visible)
+                    // Cuando el video comience a reproducirse, también mostrar el canvas y la imagen
+                    videoElement.onplay = () => {
+                        console.log('La cámara está en vivo');
+                    };
                 })
                 .catch(error => {
                     console.error('Error al acceder a la cámara: ', error);
@@ -68,6 +73,7 @@ function iniciarCamara(seccion, area) {
     });
 }
 
+// Función para tomar la foto
 function tomarFoto(seccion, area) {
     const videoElement = document.getElementById(`video-${seccion}${area}`);
     const canvasElement = document.getElementById(`canvas-${seccion}${area}`);
@@ -78,7 +84,7 @@ function tomarFoto(seccion, area) {
         return;
     }
 
-    // Verificar si el video está jugando
+    // Verificar si el video está reproduciéndose
     if (videoElement.srcObject) {
         const context = canvasElement.getContext('2d');
         // Establecer las dimensiones del canvas
@@ -101,12 +107,13 @@ function tomarFoto(seccion, area) {
         const tracks = stream.getTracks();
         tracks.forEach(track => track.stop());
         videoElement.srcObject = null;
+        videoElement.style.display = 'none';  // Esconde el video después de tomar la foto
     } else {
         console.error("El video no está reproduciéndose o no hay flujo de cámara.");
     }
 }
 
-
+// Función que se ejecuta cuando el DOM está completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
     const secciones = {
         "Intensidad": ["TI", "Diseño", "Ventas", "Cajas", "Contabilidad", "Sala de Reuniones", "Revision", "Inicio Picking", "Mitad Picking", "Final Picking", "Inicio Bodega Mayor", "Mitad Bodega Mayor", "Final Bodega Mayor", "Recepcion"],
@@ -119,8 +126,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // NO hacer nada aquí respecto a la cámara
 });
-
-
 
 
 // Función para guardar la imagen
