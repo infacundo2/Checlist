@@ -14,9 +14,8 @@
         
         <input type="file" id="file-Film" accept="image/*" onchange="guardarImagen(event, 'Envolvedora', 'Envolvedora de Film')" style="display: none;">
         <label for="file-Film" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="iniciarCamara('Envolvedora', 'Envolvedora de Film')">📷 Tomar Foto</button>
-        <video id="video-EnvolvedoraEnvolvedora de Film" style="display: none;" autoplay></video>
-        <canvas id="canvas-EnvolvedoraEnvolvedora de Film" style="display: none;"></canvas>  
+        <input type="file" id="camera-EnvolvedoraEnvolvedora de Film" accept="image/*" capture="environment" onchange="guardarImagen(event, 'Envolvedora', 'Envolvedora de Film')" style="display: none;">
+        <button id="btn-meson1" onclick="document.getElementById('camera-EnvolvedoraEnvolvedora de Film').click()">📷 Tomar Foto</button> 
         <img id="img-EnvolvedoraEnvolvedora de Film" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
         <textarea id="coment-EnvolvedoraEnvolvedora de Film" placeholder="Comentario..." oninput="guardarComentario('Envolvedora', 'Envolvedora de Film')"></textarea>
 

@@ -14,9 +14,8 @@
         
         <input type="file" id="file-UPS1" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 1')" style="display: none;">
         <label for="file-UPS1" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="iniciarCamara('UPS', 'UPS 1')">📷 Tomar Foto</button>
-        <video id="video-UPSUPS 1" style="display: none;" autoplay></video>
-        <canvas id="canvas-UPSUPS 1" style="display: none;"></canvas>  
+        <input type="file" id="camera-UPSUPS 1" accept="image/*" capture="environment" onchange="guardarImagen(event, 'UPS', 'UPS 1')" style="display: none;">
+        <button id="btn-meson1" onclick="document.getElementById('camera-UPSUPS 1').click()">📷 Tomar Foto</button>
         <img id="img-UPSUPS 1" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
         <textarea id="coment-UPSUPS 1" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 1')"></textarea>
 
@@ -24,9 +23,8 @@
         
         <input type="file" id="file-UPS2" accept="image/*" onchange="guardarImagen(event, 'UPS', 'UPS 2')" style="display: none;">
         <label for="file-UPS2" class="custom-file-upload">📂 Subir Imagen</label>
-        <button id="btn-meson1" onclick="iniciarCamara('UPS', 'UPS 2')">📷 Tomar Foto</button>
-        <video id="video-UPSUPS 2" style="display: none;" autoplay></video>
-        <canvas id="canvas-UPSUPS 2" style="display: none;"></canvas>  
+        <input type="file" id="camera-UPSUPS 2" accept="image/*" capture="environment" onchange="guardarImagen(event, 'UPS', 'UPS 2')" style="display: none;">
+        <button id="btn-meson1" onclick="document.getElementById('camera-UPSUPS 2').click()">📷 Tomar Foto</button>
         <img id="img-UPSUPS 2" style="width: 100px; display: none; margin-left: auto; margin-right: auto;">
         <textarea id="coment-UPSUPS 2" placeholder="Comentario..." oninput="guardarComentario('UPS', 'UPS 2')"></textarea>
 
